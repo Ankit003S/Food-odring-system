@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - Food Ordering System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    
+    .side-panel {
+      width: 25%;
+      height: 100vh;
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .admin-container {
+      flex: 1;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .statistic {
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: block;
+      margin-bottom: 5px;
+      padding: 8px 12px;
+      background-color: #4AAC4D;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    /* You can add more styles for different sections or elements here */
+  </style>
+</head>
+<body>
+  <div class="side-panel">
+    <h2>Admin Panel</h2>
+    <a href="/dashboard" class="btn">Dashboard</a>
+    <a href="/users" class="btn">Users</a>
+    <a href="/food-items" class="btn">Food Items</a>
+    <a href="/orders" class="btn">Orders</a>
+    <a href="/add-element" class="btn">Add Element</a>
+    <!-- Add more links for additional functionalities -->
+  </div>
+  
+  <div class="admin-container">
+    <h1>Admin Dashboard</h1>
+
+    <div class="statistic">
+      <h3>Number of Users: <span id="userCount">...</span></h3>
+      <a href="/users" class="btn">Details</a>
+    </div>
+
+    <div class="statistic">
+      <h3>Number of Food Items: <span id="foodItemCount">...</span></h3>
+      <a href="/food-items" class="btn">Details</a>
+    </div>
+
+    <div class="statistic">
+      <h3>Number of Orders: <span id="orderCount">...</span></h3>
+      <a href="/orders" class="btn">Details</a>
+    </div>
+
+    <!-- Other statistics can have similar buttons -->
+
+  </div>
+
+  <script>
+    // Simulated data - replace this with actual data fetching from your system
+    const userData = [
+      /* ... your user data ... */
+    ];
+
+    const foodData = [
+      /* ... your food item data ... */
+    ];
+
+    const orderData = [
+      /* ... your order data ... */
+    ];
+
+    // Update the counts
+    document.getElementById('userCount').innerText = userData.length;
+    document.getElementById('foodItemCount').innerText = foodData.length;
+    document.getElementById('orderCount').innerText = orderData.length;
+    // Update other statistics similarly if needed
+  </script>
+</body>
+</html>
